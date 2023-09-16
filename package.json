@@ -28,10 +28,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/amymgardiner/Text-Editor.git"
+    "url": "git+https://github.com/AlanPaccor/Text-Editor"
   },
   "bugs": {
-    "url": "https://github.com/amymgardiner/Text-Editor/issues"
+    "url": "https://github.com/AlanPaccor/Text-Editor/issues"
   },
-  "homepage": "https://github.com/amymgardiner/Text-Editor#readme"
+  "homepage": "https://github.com/AlanPaccor/Text-Editor#readme"
 }
