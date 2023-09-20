@@ -1,18 +1,18 @@
-import { getDb, putDb } from './database';
-import { header } from './header';
+import { getDatabase, addToDatabase } from './customDatabase';
+import { customHeader } from './customHeader';
 
-export default class {
+export default class TextEditor {
   constructor() {
-    const localData = localStorage.getItem('content');
+    const localData = localStorage.getItem('editorContent');
 
     if (typeof CodeMirror === 'undefined') {
       throw new Error('CodeMirror is not loaded');
     }
 
-    this.editor = CodeMirror(document.querySelector('#main'), {
+    this.editor = CodeMirror(document.querySelector('#text-editor'), {
       value: '',
       mode: 'javascript',
-      theme: 'monokai',
+      theme: 'custom-theme',
       lineNumbers: true,
       lineWrapping: true,
       autofocus: true,
@@ -20,16 +20,18 @@ export default class {
       tabSize: 2,
     });
 
-    getDb().then((data) => {
-      this.editor.setValue(data || localData || header);
+    getDatabase().then((data) => {
+      console.info('Retrieved data from CustomDatabase, setting it in the editor');
+      this.editor.setValue(data || localData || customHeader);
     });
 
     this.editor.on('change', () => {
-      localStorage.setItem('content', this.editor.getValue());
+      localStorage.setItem('editorContent', this.editor.getValue());
     });
 
     this.editor.on('blur', () => {
-      putDb(localStorage.getItem('content'));
+      console.log('Editor lost focus');
+      addToDatabase(localStorage.getItem('editorContent'));
     });
   }
 }

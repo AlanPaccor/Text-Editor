@@ -1,28 +1,85 @@
-# Text-Editor
+# ProgressivePWA-Challenge-Text_Editor
 
-Module 19 Challenge - Progressive Web Applications (PWA)
+## Description
 
-[Heroku link]() 
+This is a text editor application that runs in the browser as a progressive web application (PWA). It allows users to create notes or code snippets with or without an internet connection, providing reliable data persistence for later use. The application features offline functionality and employs various data persistence techniques for redundancy. The application is designed to meet PWA criteria and employs various modern web development techniques.
 
-## Example of App
+Throughout the project, learned how to implement offline functionality, use IndexedDB for data storage, bundle JavaScript files using Webpack, generate HTML, service worker, and manifest files, and deploy the application to Heroku.
 
-The following images show the application's manifest.json file:
+User Story
+```md
+AS A developer
+I WANT to create notes or code snippets with or without an internet connection
+SO THAT I can reliably retrieve them for later use
+```
 
-![Screenshot (92)](https://user-images.githubusercontent.com/99151426/192124827-cfa87d30-04d9-4c45-965e-dff1ca607cf9.png)
+Acceptance Criteria
+```md
+GIVEN a text editor web application
+WHEN I open my application in my editor
+THEN I should see a client server folder structure
+WHEN I run `npm run start` from the root directory
+THEN I find that my application should start up the backend and serve the client
+WHEN I run the text editor application from my terminal
+THEN I find that my JavaScript files have been bundled using webpack
+WHEN I run my webpack plugins
+THEN I find that I have a generated HTML file, service worker, and a manifest file
+WHEN I use next-gen JavaScript in my application
+THEN I find that the text editor still functions in the browser without errors
+WHEN I open the text editor
+THEN I find that IndexedDB has immediately created a database storage
+WHEN I enter content and subsequently click off of the DOM window
+THEN I find that the content in the text editor has been saved with IndexedDB
+WHEN I reopen the text editor after closing it
+THEN I find that the content in the text editor has been retrieved from our IndexedDB
+WHEN I click on the Install button
+THEN I download my web application as an icon on my desktop
+WHEN I load my web application
+THEN I should have a registered service worker using workbox
+WHEN I register a service worker
+THEN I should have my static assets pre cached upon loading along with subsequent pages and static assets
+WHEN I deploy to Heroku
+THEN I should have proper build scripts for a webpack application
+```
 
-![Screenshot (91)](https://user-images.githubusercontent.com/99151426/192124829-c24b9418-82a2-4b83-9b9a-b28affd7c023.png)
+## Table of Contents
 
-The following image shows the application's registered service worker:
+If your README is long, add a table of contents to make it easy for users to find what they need.
 
-![Screenshot (93)](https://user-images.githubusercontent.com/99151426/192124834-185cbe83-1e9b-442f-9f2c-902e98bbd41b.png)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [License](#license)
 
-The following image shows the application's IndexedDB storage:
+## Installation
 
-![Screenshot (94)](https://user-images.githubusercontent.com/99151426/192124841-fe2d2a36-728d-4b52-834c-834d4dc09c4f.png)
+To install the Text Editor project, follow these steps:
 
-The following image shows the apllication's caching strategies:
+1. Clone the repository.
+2. Navigate to the project's root directory.
+3. Run npm install to install the required dependencies.
+4. Start the application by running npm run start.
+5. Access the application in your browser at the specified address.
 
-![Screenshot (95)](https://user-images.githubusercontent.com/99151426/192124859-279faa7b-5342-44e2-882a-ec3d4210a270.png)
+## Usage
+
+To use the Text Editor application, follow these instructions:
+
+1. Open the application in your browser.
+2. Enter the desired content in the text editor.
+3. Click off the DOM window to save the content.
+4. The content will be stored in the IndexedDB database.
+5. If you close and reopen the text editor, the content will be retrieved from IndexedDB.
+
+Here is a screenshot of the Text Editor application:
+
+![Just Another Text Editor](./assets/Screenshot%202023-07-06%20at%2010.39.33%20AM.png)
 
 
-## Made By: Alan Paccor
+## License
+
+This project is covered under the [MIT License](./LICENSE). For more details, please click the license icon below under 'Badges'.
+
+## Badges
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
